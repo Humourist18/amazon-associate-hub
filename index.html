@@ -24,7 +24,9 @@
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -34,9 +36,15 @@
       line-height: 1.6;
     }
 
-    img { max-width: 100%; display: block; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     button {
       font: inherit;
@@ -73,6 +81,7 @@
       font-weight: 800;
       font-size: 1.2rem;
       letter-spacing: -0.03em;
+      cursor: pointer;
     }
 
     .brand-mark {
@@ -97,9 +106,12 @@
 
     .nav a {
       transition: color 0.2s ease;
+      cursor: pointer;
     }
 
-    .nav a:hover { color: var(--text); }
+    .nav a:hover {
+      color: var(--text);
+    }
 
     .nav-actions {
       display: flex;
@@ -116,9 +128,12 @@
       font-weight: 700;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       white-space: nowrap;
+      cursor: pointer;
     }
 
-    .btn:hover { transform: translateY(-1px); }
+    .btn:hover {
+      transform: translateY(-1px);
+    }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -132,7 +147,9 @@
       border: 1px solid rgba(255, 140, 66, 0.18);
     }
 
-    .hero { padding: 72px 0 34px; }
+    .hero {
+      padding: 72px 0 34px;
+    }
 
     .hero-grid {
       display: grid;
@@ -227,9 +244,26 @@
       backdrop-filter: blur(8px);
     }
 
-    .card-one { width: 260px; right: 28px; top: 30px; transform: rotate(8deg); }
-    .card-two { width: 230px; left: 0; bottom: 30px; transform: rotate(-9deg); }
-    .card-three { width: 290px; left: 54px; top: 140px; z-index: 2; }
+    .card-one {
+      width: 260px;
+      right: 28px;
+      top: 30px;
+      transform: rotate(8deg);
+    }
+
+    .card-two {
+      width: 230px;
+      left: 0;
+      bottom: 30px;
+      transform: rotate(-9deg);
+    }
+
+    .card-three {
+      width: 290px;
+      left: 54px;
+      top: 140px;
+      z-index: 2;
+    }
 
     .mini-product {
       overflow: hidden;
@@ -271,9 +305,14 @@
       box-shadow: 0 18px 30px rgba(15, 23, 42, 0.2);
     }
 
-    .rating-badge strong { font-size: 1.2rem; letter-spacing: -0.04em; }
+    .rating-badge strong {
+      font-size: 1.2rem;
+      letter-spacing: -0.04em;
+    }
 
-    .section { padding: 56px 0; }
+    .section {
+      padding: 56px 0;
+    }
 
     .section-header {
       display: flex;
@@ -378,7 +417,9 @@
       border-radius: 999px;
     }
 
-    .product-body { padding: 18px 18px 20px; }
+    .product-body {
+      padding: 18px 18px 20px;
+    }
 
     .product-meta {
       display: flex;
@@ -390,7 +431,10 @@
       font-size: 0.82rem;
     }
 
-    .stars { color: #f5b700; letter-spacing: 0.08em; }
+    .stars {
+      color: #f5b700;
+      letter-spacing: 0.08em;
+    }
 
     .product-title {
       margin: 0 0 12px;
@@ -415,7 +459,9 @@
       letter-spacing: -0.04em;
     }
 
-    .price strong { font-size: 1.8rem; }
+    .price strong {
+      font-size: 1.8rem;
+    }
 
     .old-price {
       color: var(--muted);
@@ -435,6 +481,12 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .product-link:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
     }
 
     .feature-grid {
@@ -469,7 +521,10 @@
       letter-spacing: -0.04em;
     }
 
-    .feature-card p { margin: 0; color: var(--muted); }
+    .feature-card p {
+      margin: 0;
+      color: var(--muted);
+    }
 
     .deal-banner {
       background: linear-gradient(135deg, #1e293b, #0f172a);
@@ -494,7 +549,10 @@
       color: rgba(255, 255, 255, 0.76);
     }
 
-    .deal-cta { display: flex; justify-content: flex-end; }
+    .deal-cta {
+      display: flex;
+      justify-content: flex-end;
+    }
 
     .review-grid {
       display: grid;
@@ -540,9 +598,15 @@
       font-size: 0.95rem;
     }
 
-    .review-person span { color: var(--muted); font-size: 0.8rem; }
+    .review-person span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
 
-    .review-card p { margin: 0; color: var(--muted); }
+    .review-card p {
+      margin: 0;
+      color: var(--muted);
+    }
 
     .footer {
       margin-top: 40px;
@@ -568,53 +632,90 @@
       flex-wrap: wrap;
     }
 
+    .footer-links a {
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
-      .deal-banner { grid-template-columns: 1fr; }
+      .deal-banner {
+        grid-template-columns: 1fr;
+      }
 
       .product-grid,
       .feature-grid,
-      .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
 
-      .nav { display: none; }
+      .nav {
+        display: none;
+      }
     }
 
     @media (max-width: 680px) {
-      .header-inner { min-height: 68px; }
-      .hero { padding-top: 44px; }
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
 
       .product-grid,
       .feature-grid,
-      .review-grid { grid-template-columns: 1fr; }
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
 
-      .section-header { flex-direction: column; align-items: flex-start; }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-      .cta-row { flex-direction: column; align-items: stretch; }
-      .btn { width: 100%; }
-      .nav-actions { display: none; }
-      .hero-meta { gap: 18px; }
+      .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .nav-actions {
+        display: none;
+      }
+
+      .hero-meta {
+        gap: 18px;
+      }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="brand" aria-label="ShopNest home">
+      <a class="brand" onclick="scrollToSection('home')">
         <span class="brand-mark">S</span>
         <span>ShopNest</span>
       </a>
 
       <nav class="nav" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#featured">Featured</a>
-        <a href="#deals">Deals</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#faq">FAQ</a>
+        <a onclick="scrollToSection('home')">Home</a>
+        <a onclick="scrollToSection('featured')">Featured</a>
+        <a onclick="scrollToSection('deals')">Deals</a>
+        <a onclick="scrollToSection('reviews')">Reviews</a>
+        <a onclick="scrollToSection('faq')">FAQ</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#featured" class="btn btn-secondary">Browse Products</a>
-        <a href="#deals" class="btn btn-primary">Shop Deals</a>
+        <button class="btn btn-secondary" onclick="scrollToSection('featured')">Browse Products</button>
+        <button class="btn btn-primary" onclick="scrollToSection('deals')">Shop Deals</button>
       </div>
     </div>
   </header>
@@ -632,8 +733,8 @@
           </p>
 
           <div class="cta-row">
-            <a href="#featured" class="btn btn-primary">Explore Best Sellers</a>
-            <a href="#reviews" class="btn btn-secondary">Read Reviews</a>
+            <button class="btn btn-primary" onclick="scrollToSection('featured')">Explore Best Sellers</button>
+            <button class="btn btn-secondary" onclick="scrollToSection('reviews')">Read Reviews</button>
           </div>
 
           <div class="hero-meta">
@@ -697,128 +798,16 @@
         </div>
 
         <div class="chip-row" aria-label="Categories">
-          <button class="chip active" type="button">All</button>
-          <button class="chip" type="button">Electronics</button>
-          <button class="chip" type="button">Home</button>
-          <button class="chip" type="button">Wellness</button>
-          <button class="chip" type="button">Office</button>
-          <button class="chip" type="button">Travel</button>
+          <button class="chip active" type="button" onclick="filterProducts(this, 'All')">All</button>
+          <button class="chip" type="button" onclick="filterProducts(this, 'Electronics')">Electronics</button>
+          <button class="chip" type="button" onclick="filterProducts(this, 'Home')">Home</button>
+          <button class="chip" type="button" onclick="filterProducts(this, 'Wellness')">Wellness</button>
+          <button class="chip" type="button" onclick="filterProducts(this, 'Office')">Office</button>
+          <button class="chip" type="button" onclick="filterProducts(this, 'Travel')">Travel</button>
         </div>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-image">
-              <span class="badge">Electronics</span>
-              <span class="save-badge">Save 18%</span>
-              <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80" alt="Wireless earbuds" />
-            </div>
-            <div class="product-body">
-              <div class="product-meta">
-                <span>Premium audio</span>
-                <span class="stars">★★★★★</span>
-              </div>
-              <h3 class="product-title">Aurora Noise-Canceling Earbuds</h3>
-              <div class="price-row">
-                <div class="price"><strong>$89</strong><span class="old-price">$109</span></div>
-              </div>
-              <a href="https://www.amazon.com/dp/B0XXXXXXX?tag=youraffiliateid-20" target="_blank" rel="noopener sponsored" class="product-link">View on Amazon →</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-image">
-              <span class="badge">Home</span>
-              <span class="save-badge">Save 22%</span>
-              <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80" alt="Smart home lamp" />
-            </div>
-            <div class="product-body">
-              <div class="product-meta">
-                <span>Modern living</span>
-                <span class="stars">★★★★★</span>
-              </div>
-              <h3 class="product-title">Luma Smart Desk Lamp</h3>
-              <div class="price-row">
-                <div class="price"><strong>$64</strong><span class="old-price">$82</span></div>
-              </div>
-              <a href="https://www.amazon.com/dp/B0YYYYYYY?tag=youraffiliateid-20" target="_blank" rel="noopener sponsored" class="product-link">View on Amazon →</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-image">
-              <span class="badge">Wellness</span>
-              <span class="save-badge">Hot deal</span>
-              <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" alt="Fitness accessory" />
-            </div>
-            <div class="product-body">
-              <div class="product-meta">
-                <span>Fitness</span>
-                <span class="stars">★★★★★</span>
-              </div>
-              <h3 class="product-title">Flexi Smart Yoga Mat</h3>
-              <div class="price-row">
-                <div class="price"><strong>$39</strong><span class="old-price">$49</span></div>
-              </div>
-              <a href="https://www.amazon.com/dp/B0ZZZZZZZ?tag=youraffiliateid-20" target="_blank" rel="noopener sponsored" class="product-link">View on Amazon →</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-image">
-              <span class="badge">Office</span>
-              <span class="save-badge">New</span>
-              <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=900&q=80" alt="Laptop desk" />
-            </div>
-            <div class="product-body">
-              <div class="product-meta">
-                <span>Workspace</span>
-                <span class="stars">★★★★★</span>
-              </div>
-              <h3 class="product-title">ErgoFlex Laptop Stand</h3>
-              <div class="price-row">
-                <div class="price"><strong>$44</strong><span class="old-price">$58</span></div>
-              </div>
-              <a href="https://www.amazon.com/dp/B0AAAAAAA?tag=youraffiliateid-20" target="_blank" rel="noopener sponsored" class="product-link">View on Amazon →</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-image">
-              <span class="badge">Travel</span>
-              <span class="save-badge">Top rated</span>
-              <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80" alt="Travel suitcase" />
-            </div>
-            <div class="product-body">
-              <div class="product-meta">
-                <span>Travel gear</span>
-                <span class="stars">★★★★★</span>
-              </div>
-              <h3 class="product-title">Summit Carry-On Suitcase</h3>
-              <div class="price-row">
-                <div class="price"><strong>$119</strong><span class="old-price">$159</span></div>
-              </div>
-              <a href="https://www.amazon.com/dp/B0BBBBBBB?tag=youraffiliateid-20" target="_blank" rel="noopener sponsored" class="product-link">View on Amazon →</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-image">
-              <span class="badge">Kitchen</span>
-              <span class="save-badge">Best value</span>
-              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Kitchen gadget" />
-            </div>
-            <div class="product-body">
-              <div class="product-meta">
-                <span>Daily essentials</span>
-                <span class="stars">★★★★★</span>
-              </div>
-              <h3 class="product-title">AeroBlend Personal Blender</h3>
-              <div class="price-row">
-                <div class="price"><strong>$36</strong><span class="old-price">$47</span></div>
-              </div>
-              <a href="https://www.amazon.com/dp/B0CCCCCCC?tag=youraffiliateid-20" target="_blank" rel="noopener sponsored" class="product-link">View on Amazon →</a>
-            </div>
-          </article>
+        <div class="product-grid" id="productGrid">
+          <!-- Products will be generated by JavaScript -->
         </div>
       </div>
     </section>
@@ -861,7 +850,7 @@
             <span class="eyebrow" style="background: rgba(255,255,255,0.08); color: #fff; border-color: rgba(255,255,255,0.15);">Limited time offers</span>
             <h3>Weekend deal drop</h3>
             <p>Save on smart home, wellness, office, and travel essentials before the sale ends.</p>
-            <a href="#featured" class="btn btn-primary" style="background: linear-gradient(135deg, #ff8c42, #ffb067);">Claim the deal</a>
+            <button class="btn btn-primary" style="background: linear-gradient(135deg, #ff8c42, #ffb067); cursor: pointer;" onclick="scrollToSection('featured')">Claim the deal</button>
           </div>
 
           <div class="deal-cta">
@@ -892,7 +881,7 @@
               </div>
               <span class="stars">★★★★★</span>
             </div>
-            <p>“The recommendations are practical and genuinely useful. I found a desk setup that improved my daily workflow.”</p>
+            <p>"The recommendations are practical and genuinely useful. I found a desk setup that improved my daily workflow."</p>
           </article>
 
           <article class="review-card">
@@ -906,7 +895,7 @@
               </div>
               <span class="stars">★★★★★</span>
             </div>
-            <p>“Easy to browse, elegant design, and the links are super straightforward. It feels like a premium product page.”</p>
+            <p>"Easy to browse, elegant design, and the links are super straightforward. It feels like a premium product page."</p>
           </article>
 
           <article class="review-card">
@@ -920,7 +909,7 @@
               </div>
               <span class="stars">★★★★★</span>
             </div>
-            <p>“Tons of useful product ideas at very fair prices. I found a wellness gadget I use every day.”</p>
+            <p>"Tons of useful product ideas at very fair prices. I found a wellness gadget I use every day."</p>
           </article>
         </div>
       </div>
@@ -930,7 +919,7 @@
   <footer class="footer" id="faq">
     <div class="container footer-row">
       <div>
-        <div class="brand" style="margin-bottom: 8px;">
+        <div class="brand" style="margin-bottom: 8px;" onclick="scrollToSection('home')">
           <span class="brand-mark">S</span>
           <span>ShopNest</span>
         </div>
@@ -938,33 +927,152 @@
       </div>
 
       <div class="footer-links">
-        <a href="#featured">Featured</a>
-        <a href="#deals">Deals</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#home">Top</a>
+        <a onclick="scrollToSection('featured')">Featured</a>
+        <a onclick="scrollToSection('deals')">Deals</a>
+        <a onclick="scrollToSection('reviews')">Reviews</a>
+        <a onclick="scrollToSection('home')">Top</a>
       </div>
     </div>
   </footer>
 
   <script>
+    // Product data
+    const products = [
+      {
+        id: 1,
+        title: "Aurora Noise-Canceling Earbuds",
+        category: "Electronics",
+        price: 89,
+        oldPrice: 109,
+        save: "18%",
+        meta: "Premium audio",
+        rating: 5,
+        img: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80",
+        badge: "Save 18%",
+        link: "https://www.amazon.com/s?k=wireless+earbuds&tag=youraffiliateid-20"
+      },
+      {
+        id: 2,
+        title: "Luma Smart Desk Lamp",
+        category: "Home",
+        price: 64,
+        oldPrice: 82,
+        save: "22%",
+        meta: "Modern living",
+        rating: 5,
+        img: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80",
+        badge: "Save 22%",
+        link: "https://www.amazon.com/s?k=desk+lamp&tag=youraffiliateid-20"
+      },
+      {
+        id: 3,
+        title: "Flexi Smart Yoga Mat",
+        category: "Wellness",
+        price: 39,
+        oldPrice: 49,
+        save: "20%",
+        meta: "Fitness",
+        rating: 5,
+        img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80",
+        badge: "Hot deal",
+        link: "https://www.amazon.com/s?k=yoga+mat&tag=youraffiliateid-20"
+      },
+      {
+        id: 4,
+        title: "ErgoFlex Laptop Stand",
+        category: "Office",
+        price: 44,
+        oldPrice: 58,
+        save: "24%",
+        meta: "Workspace",
+        rating: 5,
+        img: "https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=900&q=80",
+        badge: "New",
+        link: "https://www.amazon.com/s?k=laptop+stand&tag=youraffiliateid-20"
+      },
+      {
+        id: 5,
+        title: "Summit Carry-On Suitcase",
+        category: "Travel",
+        price: 119,
+        oldPrice: 159,
+        save: "25%",
+        meta: "Travel gear",
+        rating: 5,
+        img: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80",
+        badge: "Top rated",
+        link: "https://www.amazon.com/s?k=carry+on+luggage&tag=youraffiliateid-20"
+      },
+      {
+        id: 6,
+        title: "AeroBlend Personal Blender",
+        category: "Home",
+        price: 36,
+        oldPrice: 47,
+        save: "23%",
+        meta: "Daily essentials",
+        rating: 5,
+        img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80",
+        badge: "Best value",
+        link: "https://www.amazon.com/s?k=personal+blender&tag=youraffiliateid-20"
+      }
+    ];
+
+    // Update year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    const chips = document.querySelectorAll(".chip");
-    const cards = document.querySelectorAll(".product-card");
+    // Render products
+    function renderProducts(filter = 'All') {
+      const grid = document.getElementById('productGrid');
+      grid.innerHTML = '';
 
-    chips.forEach((chip) => {
-      chip.addEventListener("click", () => {
-        chips.forEach((c) => c.classList.remove("active"));
-        chip.classList.add("active");
+      const filteredProducts = filter === 'All' ? products : products.filter(p => p.category === filter);
 
-        const filter = chip.textContent.trim().toLowerCase();
-        cards.forEach((card) => {
-          const category = card.querySelector(".badge").textContent.trim().toLowerCase();
-          const isVisible = filter === "all" || category === filter;
-          card.style.display = isVisible ? "block" : "none";
-        });
+      filteredProducts.forEach(product => {
+        const card = document.createElement('article');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="product-image">
+            <span class="badge">${product.category}</span>
+            <span class="save-badge">${product.badge}</span>
+            <img src="${product.img}" alt="${product.title}" />
+          </div>
+          <div class="product-body">
+            <div class="product-meta">
+              <span>${product.meta}</span>
+              <span class="stars">${'★'.repeat(product.rating)}</span>
+            </div>
+            <h3 class="product-title">${product.title}</h3>
+            <div class="price-row">
+              <div class="price"><strong>$${product.price}</strong><span class="old-price">$${product.oldPrice}</span></div>
+            </div>
+            <a href="${product.link}" target="_blank" rel="noopener sponsored" class="product-link">View on Amazon →</a>
+          </div>
+        `;
+        grid.appendChild(card);
       });
-    });
+    }
+
+    // Filter products
+    function filterProducts(element, category) {
+      // Update active chip
+      document.querySelectorAll('.chip').forEach(chip => chip.classList.remove('active'));
+      element.classList.add('active');
+      
+      // Render filtered products
+      renderProducts(category);
+    }
+
+    // Smooth scroll
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Initial render
+    renderProducts();
   </script>
 </body>
 </html>
